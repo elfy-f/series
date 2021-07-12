@@ -25,6 +25,6 @@ public function home()
 
     public function test()
     {
-        return $this->render('main/home/test.html.twig')
+        return $this->render('main/home/test.html.twig');
     }
 }
