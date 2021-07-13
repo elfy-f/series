@@ -8,6 +8,25 @@
     <title>Series!</title>
 </head>
 <body>
-<h1>Coucou</h1>
+<h1>hello</h1>
+<div>
+    {# crée une variable! #}
+    {% set name = "fred" %}
+    <h2>{{ name |upper }}</h2>
+
+        {# créer tableau de couleur #}
+        {%  set colors = ["blue", "green", "red"] %}
+        {% for color in colors %}
+            <div style ="background-color: {{ color }}">{{ color }}</div>
+        {% endfor %}
+
+    {# un objet #}
+    {% set book =
+        {title:'oponopono',
+        year:2000,
+        author: "pouf"}
+    %}
+    <h3>{{ book. author }}</h3>
+</div>
 </body>
 </html>
