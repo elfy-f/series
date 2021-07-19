@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Serie;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -21,13 +22,13 @@ class SerieType extends AbstractType
                 'required'=>false,
             ])
             ->add('status', ChoiceType::class, [
-                'choices'=>[
+                'choices' => [
                     'Cancelled'=>'Cancelled',
                     'ended'=>'ended',
                     'returning'=>'returning'
                 ],
-                'multiple'=> false
-    ])
+                'multiple'=> false,
+             ])
             ->add('vote')
             ->add('popularity')
             ->add('genres')

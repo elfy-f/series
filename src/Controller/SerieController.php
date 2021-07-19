@@ -7,7 +7,7 @@ use App\Form\SerieType;
 use App\Repository\SerieRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFundation\Request;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -65,7 +65,7 @@ class SerieController extends AbstractController
             $entityManager->flush();
 
             $this->addFlash('success','Serie added!good job.');
-            return $this->redirectToRoute('serie_details');
+            return $this->redirectToRoute('serie_details', ['id'=>$serie->getId()]);
        }
 
 
