@@ -34,12 +34,12 @@ class SerieType extends AbstractType
             ->add('firstAirDate', DateType::class,[
                 'html5'=>true,
                 'widget'=> 'single_text',
-            ]
+            ])
             ->add('LastAirDate')
             ->add('backdrop')
             ->add('tmdbId')
 
-        ;
+    ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
